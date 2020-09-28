@@ -1,6 +1,7 @@
 package com.arslan;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Location {
@@ -12,9 +13,9 @@ public class Location {
         this.locationID = locationID;
         this.description = description;
         if (exits != null) {
-            this.exits = new HashMap<>(exits);
+            this.exits = new LinkedHashMap<>(exits);
         } else {
-            this.exits = new HashMap<>();
+            this.exits = new LinkedHashMap<>();
         }
         this.exits.put("Q", 0);
     }
@@ -32,7 +33,7 @@ public class Location {
     }
 
     public Map<String, Integer> getExits() {
-        return new HashMap<>(exits);
+        return new LinkedHashMap<>(exits);
     }
 
     protected void addExit(String direction, int location) {
