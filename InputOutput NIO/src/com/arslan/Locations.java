@@ -15,8 +15,6 @@ public class Locations implements Map<Integer, Location> {
             for (Location location: locations.values()) {
                 locFile.writeObject(location);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
 
 
